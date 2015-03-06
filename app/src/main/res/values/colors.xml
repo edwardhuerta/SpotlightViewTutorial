@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+    <color name="first_billboard_background">#a2b4fa40</color>
+    <color name="last_billboard_background">#d7faf56e</color>
+
+    <color name="yellow">#fffaf56e</color>
+    <color name="red">#ffff0018</color>
+    <color name="transparent_black_2">#824b4b52</color>
+    <color name="spotlight_black_background">#821c1c23</color>
+
+    <color name="gradient_bluish">#ff66f5fa</color>
+    <color name="gradient_reddish">#fffa586e</color>
+    <color name="gradient_dark_blue">#ff6375fa</color>
+    <color name="gradient_pink">#ffec25fa</color>
+    <color name="gradient_dark_gray">#ff5a5056</color>
+    <color name="gradient_greenish">#ff66de91</color>
+
+    <color name="billboard_gb_darkblue">#ff213555</color>
+</resources>

@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!-- A container for all three sections of a layout related to the SpotlightView.
+          1.) mask_over : a FrameLayout containing your original layout
+          2.) real_spotlight : the subclass of SpotlightView
+          3.) button_container : the buttons that the user can click to move on to the next animation
+          This container can be placed anywhere, in this case, it is placed inside a LinearLayout. -->
+    <FrameLayout
+        android:id="@+id/activity_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- This is the target View. The SpotlightView will find this view, take
+             a screenshot, draw it on a bitmap, and use it as the shader. This can
+             be any layout: LinearLayout, FrameLayout, RelativeLayout... -->
+        <FrameLayout
+            android:id="@+id/mask_over"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffbaeeff"
+                android:orientation="vertical"
+                android:src="@drawable/edward">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/edward"/>
+
+                <TextView
+                    android:id="@+id/tutorial_start_here"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="@string/hover_over_example_text1"
+                    android:textColor="@color/red"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tutorial_end_here"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:text="@string/hover_over_example_end"/>
+
+            <TextView
+                android:id="@+id/tutorial_second_end_here"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:text="@string/hover_over_example_text2"/>
+
+            <TextView
+                android:id="@+id/long_text"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:text="@string/long_text"/>
+
+        </FrameLayout>
+
+        <!-- A subclass of SpotlightView that draws a red frame and the x,y coordinates
+             of the canvas.
+             The alpha is set to 0 because the animation will increase it to 1.
+             -->
+        <nl.elements.spotlighttutoriallibrary.views.SpotlightView
+            android:id="@+id/real_spotlight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.0"
+            android:background="@color/spotlight_black_background"
+            app:mask="@drawable/spot_mask"
+            app:target="@id/mask_over" />
+
+        <!-- A container for all the buttons a user can click on to move on to the next animation.
+            Remember that the SpotlightView may fill up the entire screen, so these must be placed on top
+            of the SpotlightView. -->
+        <FrameLayout
+            android:id="@+id/button_container"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <!-- When you use these views from the TutorialBuilder, they are automatically hidden,
+                and shown at the right time so that the user can click on them. -->
+            <Button
+                android:id="@+id/click_goto_next_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/hover_over_example_gotonext"/>
+
+            <Button
+                android:id="@+id/click_to_second_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/hover_over_example_second"/>
+
+            <Button
+                android:id="@+id/click_goto_after_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/hover_over_example_after_last"/>
+
+            <Button
+                android:id="@+id/click_to_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/hover_over_example_finish"/>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/makeitexpand"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="bottom"/>
+
+</LinearLayout>

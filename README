@@ -1,0 +1,19 @@
+This is the source code for the talk given during the Barcelona Android User Group talk given by Edward Huerta.
+
+This is the initial release that includes a demonstration of the normal spotlightview. You can run the app to get a demonstration of the app shown in the presentation.
+
+You can also copy the spotlighttutoriallibrary into your project and add this line to your application build.grade:
+
+compile project(":spotlighttutoriallibrary")
+
+Don't forget that your settings.gradle should have something similar to:
+
+include ':app', ':spotlighttutoriallibrary'
+
+(Maybe the ':app' is different in your app because you named it something else.)
+
+Just look at the sample application to read how it is setup. If you have problems, please contact me at edward@elements.nl I will be happy to help you.
+
+Soon, I will publish the example app as an apk file so that you can download it and run the app. But also I will publish the library aar file, I just need
+to find a place to host these files first and then I will update this repo with the information.
+

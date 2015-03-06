@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nl.elements.spotlighttutorialdemo" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- Different showcases of the SpotlightView -->
+        <activity
+            android:name="nl.elements.spotlighttutorialdemo.SpotlightNormalActivity"
+            android:label="@string/app_name" />
+
+        <!-- The simple gradient examples -->
+        <activity
+            android:name="nl.elements.spotlighttutorialdemo.gradientexamples.FullGradientActivity"
+            android:label="@string/title_activity_association_one" />
+        <activity
+            android:name="nl.elements.spotlighttutorialdemo.gradientexamples.GradientOnPaintActivity"
+            android:label="@string/title_activity_gradient_on_paint"  />
+
+        <!-- The main menu -->
+        <activity
+            android:name="nl.elements.spotlighttutorialdemo.MainActivity"
+            android:label="@string/app_name" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

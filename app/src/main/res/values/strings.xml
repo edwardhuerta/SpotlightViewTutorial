@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Spotlight Tutorial</string>
+    <string name="long_text">This is a really long text. It should make the spotlight expand because it might not fit with the standard size.</string>
+
+    <string name="title_activity_association_one">Full Screen Gradient</string>
+    <string name="title_activity_gradient_on_paint">Gradient On Paint</string>
+    <string name="title_activity_main">Main Menu Activity</string>
+
+    <string name="billboard_example_text1">This is edward Huerta!</string>
+    <string name="billboard_example_text_2">Last one!</string>
+
+    <string name="hover_over_example_text1">start here</string>
+    <string name="hover_over_example_end">End Here</string>
+    <string name="hover_over_example_text2">2nd ending</string>
+    <string name="hover_over_example_gotonext">Goto Next Screen</string>
+    <string name="hover_over_example_second">2nd</string>
+    <string name="hover_over_example_after_last">After last</string>
+    <string name="hover_over_example_finish">Finish</string>
+
+</resources>
